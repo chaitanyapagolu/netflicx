@@ -1,0 +1,240 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&family=Roboto:wght@500;700&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    font-family: 'Roboto', sans-serif;
+    background-color: #000;
+    color: #fff;
+}
+.firstx{
+    height: 100vh;
+    background-color: #000;
+    background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)), url(/netbg.jpg);
+    background-size: cover;
+    background-position: center;
+    padding: 10px 8%;
+}
+.nav{
+    display: flex;
+    padding: 10px 0;
+    justify-content: space-between;
+    /* background-color: aqua; */
+    align-items: center;
+}
+#topbtnx button{
+    border: none;
+    padding: 8px 15px;
+    background-color: #db0001;
+    color: #fff;
+    padding: 7px 20px;
+    font-size: 12px;
+    margin-left: 10px;
+    border-radius:4px;
+    cursor: pointer;
+}
+#langbtnx{
+    display: inline-flex;
+    align-items: center;
+    background-color: rgba(0,0,0,0.7);
+    border: 1px solid #fff;
+    padding: 7px 10px;
+}
+#langbtnx img{
+    width: 10px;
+    margin-left: 10px;
+}
+.textx{  
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+}
+.textx h1{
+    font-size: 50px;
+    line-height: 60px;
+    font-weight: 600;
+    max-width: 650px;
+}
+.textx h3{
+    margin-bottom: 20px;
+    font-weight: 400;
+}
+.emailgets{
+    background-color: #fff;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    margin-top: 30px;
+    overflow: hidden;
+}
+.emailgets input{
+    flex:1;
+    border:0;
+    outline: 0;
+    margin-left: 20px;
+}
+.emailgets button{
+    background-color: #db0001;
+    border:0;
+    outline: 0;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    padding: 15px 30px;
+}
+.zigzag{
+    padding: 50px 12%;
+    font-size: 22px;
+}
+.items{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 50px 0;
+}
+.colstx{
+    flex-basis: 50%;
+    margin-bottom: 20px;
+}
+.colimg{
+    flex-basis: 50%;
+    margin-bottom: 20px;
+}
+.colimg img{
+    display: block;
+    width: 90%;
+    margin: auto;
+}
+.zigzag h2{
+    font-size: 50px;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+.faq{
+    padding: 10px 12%;
+    text-align: center;
+    font-size: 18px;
+    border-top: 6px solid #333;
+    padding-top: 80px;
+}
+.faq h2{
+    font-weight: 500;
+    font-size: 40px;
+}
+.plus{
+    margin: 60px auto;
+    width: 100%;
+    max-width: 750px;
+}
+.plus li{
+    list-style: none;
+    width: 100%;
+    padding: 5px;
+}
+.plus li label{
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    font-size: 18px;
+    font-weight: 500;
+    background-color: #303030;
+    margin-bottom: 2px;
+    cursor: pointer;
+    position: relative;
+}
+label:after{
+    content: "+";
+    font-size: 34px;
+    position: absolute;
+    right: 20px;
+    transition: transform 0.5s;
+}
+input[type="radio"]{
+    display: none;
+}
+.plus .conts{
+    background-color: #303030;
+    text-align: left;
+    padding: 0 20px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s, padding 0.5s;
+}
+.plus input[type="radio"]:checked + label + .conts{
+    max-height: 600px;
+    padding: 30px 20px;
+}
+
+.plus input[type="radio"]:checked + label::after{
+    transform: rotate(135deg);
+}
+.faq .emailgets{
+    max-width: 600px;
+    margin: 20px auto 60px;
+}
+.fotter{
+    padding: 50px 15% 10px;
+    border-top: 6px solid #333;
+    color: #fff;
+}
+.fotter h2{
+    font-size: 18px;
+    font-weight: 400;
+    margin-bottom: 30px;
+}
+.fotter .col{
+    flex-basis: 25% !important;
+    flex-grow: 1;
+    /* background-color: aqua; */
+    margin-bottom: 20px;
+}
+.fotter .col a{
+    display: block;
+    color: #fff;
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+.fotter .row{
+    display: flex;
+    align-items: flex-start;
+    padding: 10px 0;
+}
+@media only screen and (max-width:600px){
+    .logo{
+        width: 100px;
+    }
+    .topbtnx button{
+        padding: 5px 10px;
+    }
+    .textx{
+        padding-top: 150px;
+    }
+    .textx h1{
+        font-size: 40px;
+        line-height: 1cm;
+    }
+    .emailgets button{
+        font-size: 12px;
+        padding: 10px 15px;
+    }
+    .colstx, .colimg{
+        flex-basis: 100%;
+    }
+    .items:nth-child(2), .row:nth-child(4){
+        flex-direction: column-reverse;
+    }
+    .fotter{
+        text-align: center;
+    }
+    .fotter .col{
+        margin-top: 50px;
+    }
+    .fotter .row{
+        display: block;
+    }
+}
